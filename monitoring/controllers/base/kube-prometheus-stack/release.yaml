@@ -31,10 +31,10 @@ spec:
   values:
     grafana:
       adminPassword: dondon
-  		ingress:
-    		enabled: true
-    		ingressClassName: traefik
-    		hosts:
-    		  - grafana-local.dondon.wtf
-    		path: /
-    		tls: []
+      ingress:
+        enabled: true
+        ingressClassName: traefik
+        hosts:
+          - grafana-local.dondon.wtf
+        path: /
+        tls: []
