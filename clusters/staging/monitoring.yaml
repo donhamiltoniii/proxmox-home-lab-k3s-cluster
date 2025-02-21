@@ -26,7 +26,7 @@ spec:
   interval: 1m0s
   retryInterval: 1m
   timeout: 5m
-  path: ./monitoring/configs/staging
+  path: ./monitoring/config/staging
   prune: true
   sourceRef:
     kind: GitRepository
