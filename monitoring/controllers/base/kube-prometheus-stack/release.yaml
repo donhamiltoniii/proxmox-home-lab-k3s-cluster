@@ -36,4 +36,7 @@ spec:
         ingressClassName: traefik
         hosts:
           - grafana-local.dondon.wtf
-        tls: []
+        tls:
+          - secretName: grafana-tls-secret
+            hosts:
+              - grafana-local.dondon.wtf
