@@ -40,5 +40,5 @@ spec:
           persistentVolumeClaim:
             claimName: linkding-data-pvc
   tolerations:
-    operator: "Exists"
-    effect: "NoSchedule"
+    - operator: "Exists"
+      effect: "NoSchedule"
