@@ -39,3 +39,6 @@ spec:
         - name: linkding-data
           persistentVolumeClaim:
             claimName: linkding-data-pvc
+  tolerations:
+    operator: "Exists"
+    key: "node-role.kubernetes.io/master"
