@@ -17,7 +17,6 @@ spec:
         image: cloudflare/cloudflared:latest
         args:
         - tunnel
-
         # Points cloudflared to the config file, which configures what
         # cloudflared will actually do. This file is created by a ConfigMap
         # below.
@@ -67,7 +66,8 @@ metadata:
 data:
   config.yaml: |
     # Name of the tunnel you want to run
-    tunnel: ldhl
+    
+    tunnel: audiobooks
 
     credentials-file: /etc/cloudflared/creds/credentials.json
 
@@ -76,8 +76,8 @@ data:
     no-autoupdate: true
 
     ingress:
-    - hostname: linkding.dondon.wtf
-      service: http://linkding:9090
+    - hostname: audiobooks.mischavandenburg.net
+      service: http://audiobookshelf:3005
 
     # This rule sends traffic to the built-in hello-world HTTP server. This can help debug connectivity
     # issues. If hello.example.com resolves and tunnel.example.com does not, then the problem is
